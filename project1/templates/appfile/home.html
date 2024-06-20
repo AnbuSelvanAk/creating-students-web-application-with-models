@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Student Informations</title>
+</head>
+<body>
+<center>
+<h1> STUDENT INFORMATION</h1>
+{% if a %}
+<table border=5px;>
+<thead>
+<th>STUDENT NO</th>
+<th>STUDENT NAME</th>
+<th>STUDENT SALARY</th>
+<th>STUDENT ADDRESS</th>
+</thead>
+{% for x in a %}
+
+<tr>
+<td>{{x.sno}}</td>
+<td>{{x.sname}}</td>
+<td>{{x.ssalary}}</td>
+<td>{{x.saddress}}</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>NO RECORDS FOUND</p>
+{% endif %}
+</center>
+</body>
+</html>
